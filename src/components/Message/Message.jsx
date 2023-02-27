@@ -1,16 +1,11 @@
-import PropTypes from 'prop-types';
-import css from './Message.module.css';
+import { Wrapper, Text } from './Message.styled';
 
-function Message({ text }) {
+function Message() {
   return (
-    <div className={css.wrapper}>
-      <p className={css.text}>{text}</p>
-    </div>
+    <Wrapper>
+      <Text>Contact list is empty.</Text>
+    </Wrapper>
   );
 }
-
-Message.prototype = {
-  text: PropTypes.string.isRequired,
-};
 
 export default Message;
